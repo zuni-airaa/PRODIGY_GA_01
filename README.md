@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/github/zuni-airaa/PRODIGY_GA_01/blob/main/notebooks/PRODIGY_GA_01.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zuni-airaa/PRODIGY_GA_01/blob/main/notebooks/PRODIGY_GA_01.ipynb)
 
 # PRODIGY_GA_01
 
