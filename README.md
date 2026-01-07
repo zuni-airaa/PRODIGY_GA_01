@@ -20,3 +20,47 @@ This project demonstrates fine-tuning **GPT-2**, a transformer-based language mo
 Install dependencies:
 ```bash
 pip install transformers datasets torch
+```
+
+Run the notebook in Google Colab or locally to fine-tune GPT-2.
+
+##  References
+- HuggingFace Blog: [How to generate text](https://huggingface.co/blog/how-to-generate)
+- Colab Notebook: [Text generation tutorial](https://colab.research.google.com/drive/15qBZx5y9rdaQSyWpsreMDnTiZ5IlN0zD?usp=sharing)
+
+##  Example Usage
+```python
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
+
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+model = GPT2LMHeadModel.from_pretrained("gpt2")
+
+prompt = "The future of AI is"
+inputs = tokenizer.encode(prompt, return_tensors="pt")
+outputs = model.generate(inputs, max_length=50, temperature=0.7, top_p=0.9, do_sample=True)
+
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+##  Results
+
+Here are some example outputs generated after fine‑tuning GPT‑2:
+
+**Prompt:**  
+`The future of AI is.`
+
+**Generated Output:**  
+`The future of AI is filled with opportunities, where machines assist humans in solving complex problems, creating new ideas, and inspiring innovation across industries.`
+
+---
+
+**Prompt:**  
+`Self‑motivation comes from.`
+
+**Generated Output:**  
+`Self‑motivation comes from believing in your own potential, setting clear goals, and taking small steps every day toward progress.`
+
+---
+
+Sample outputs are stored in the `results/` folder for reference.
+
