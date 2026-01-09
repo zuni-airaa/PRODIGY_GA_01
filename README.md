@@ -66,8 +66,9 @@ Here are some example outputs generated after fine‑tuning GPT‑2:
 
 Sample outputs are stored in the `results/` folder for reference.
 
+
+##  Repository Structure 
 ```
-##  Repository Structure (Task‑01)
 PRODIGY_GA_01/
 ├── data/
 │   ├── train.txt
